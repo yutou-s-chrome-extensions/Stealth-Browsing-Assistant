@@ -1,0 +1,290 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f4f7f9;
+  color: #333;
+  min-width: 500px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #34495e;
+  border-bottom: 2px solid #ecf0f1;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#new-site-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+#new-site-input:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  background-color: #3498db;
+  color: white;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+#add-site-button {
+  border-radius: 0 4px 4px 0;
+}
+
+#clear-all-logs-button {
+  background-color: #e74c3c;
+  margin-bottom: 15px;
+}
+
+#clear-all-logs-button:hover {
+  background-color: #c0392b;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background-color: #ecf0f1;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all; /* Ensure long URLs wrap */
+}
+
+li strong {
+    margin-right: 10px;
+}
+
+li small {
+    color: #555;
+    display: block; /* Make small tags take full width for next line */
+    font-size: 0.9em;
+}
+
+li small:first-of-type {
+    margin-top: 4px; /* Space between title/url and url details */
+}
+
+.remove-item-button {
+  background-color: #95a5a6;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  margin-left: 10px; /* Space between item text and button */
+}
+
+.remove-item-button:hover {
+  background-color: #7f8c8d;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #ddd;
+  margin: 40px 0;
+}
+
+/* 新增：私密浏览日志容器 */
+.private-log-container {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-top: 10px;
+}
+
+/* 新增：隐私浏览日志表格样式 */
+.log-table-header {
+  display: flex;
+  background-color: #34495e;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px 4px 0 0;
+  margin-bottom: 1px;
+}
+
+.log-table-row {
+  display: flex;
+  background-color: #ecf0f1;
+  border-radius: 2px;
+  margin-bottom: 4px;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.log-table-row:hover {
+  background-color: #e0e6e8;
+}
+
+.log-date-cell, .log-title-cell, .log-url-cell, .log-actions-cell {
+  padding: 12px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.log-date-cell {
+  flex: 0 0 140px;
+  font-size: 0.9em;
+}
+
+.log-title-cell {
+  flex: 1 1 150px;
+  font-weight: 500;
+}
+
+.log-url-cell {
+  flex: 1 1 200px;
+  display: flex;
+  font-size: 0.9em;
+}
+
+.log-actions-cell {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.log-actions-cell .remove-item-button {
+  padding: 5px 10px;
+  font-size: 12px;
+  margin-left: 0;
+}
+
+.log-url-link {
+  color: #2980b9;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.log-url-link:hover {
+  text-decoration: underline;
+}
+
+.log-domain {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.log-path {
+  color: #7f8c8d;
+  font-size: 0.9em;
+}
+
+.empty-log-message {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Basic responsiveness */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+  .container {
+    padding: 15px;
+  }
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.4em;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  #new-site-input {
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  #add-site-button {
+    border-radius: 4px;
+    width: 100%;
+  }
+  li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .remove-item-button {
+    margin-left: 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  /* 调整表格布局为列式布局（适合小屏幕） */
+  .log-table-header, .log-table-row {
+    flex-direction: column;
+    padding: 5px;
+  }
+  
+  .log-date-cell, .log-title-cell, .log-url-cell, .log-actions-cell {
+    width: 100%;
+    flex: none;
+    padding: 5px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  
+  .log-date-cell {
+    font-size: 0.8em;
+  }
+  
+  .log-actions-cell {
+    border-bottom: none;
+    margin-top: 5px;
+  }
+  
+  .log-actions-cell .remove-item-button {
+    width: 100%;
+  }
+} 

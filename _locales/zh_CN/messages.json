@@ -1,0 +1,58 @@
+{
+  "extensionName": {
+    "message": "隐秘浏览助手",
+    "description": "扩展程序的名称。"
+  },
+  "extensionDescription": {
+    "message": "为指定网站隐藏浏览记录，并提供私密日志。",
+    "description": "扩展程序功能的简要描述。"
+  },
+  "optionsPageTitle": {
+    "message": "隐秘浏览助手设置",
+    "description": "选项页的标题。"
+  },
+  "ignoreListSectionTitle": {
+    "message": "忽略名单管理",
+    "description": "忽略名单部分的标题。"
+  },
+  "addSitePlaceholder": {
+    "message": "输入域名 (例如 example.com)",
+    "description": "添加网站输入框的占位符。"
+  },
+  "addSiteButton": {
+    "message": "添加到忽略名单",
+    "description": "添加网站按钮的文本。"
+  },
+  "removeButton": {
+    "message": "移除",
+    "description": "移除网站/日志按钮的文本。"
+  },
+  "privateLogSectionTitle": {
+    "message": "隐私浏览日志",
+    "description": "隐私日志部分的标题。"
+  },
+  "clearAllPrivateLogsButton": {
+    "message": "清空所有隐私日志",
+    "description": "清空所有隐私日志按钮的文本。"
+  },
+  "popupAddToIgnoreList": {
+    "message": "将当前站点添加到忽略列表",
+    "description": "弹出窗口中用于添加当前站点的按钮文本。"
+  },
+  "popupRemoveFromIgnoreList": {
+    "message": "从忽略列表中移除当前站点",
+    "description": "弹出窗口中用于移除当前站点的按钮文本。"
+  },
+  "popupSiteIgnored": {
+    "message": "当前站点正在被忽略。",
+    "description": "当站点被忽略时，在弹出窗口中显示的状态消息。"
+  },
+  "popupSiteNotIgnored": {
+    "message": "当前站点不在忽略列表中。",
+    "description": "当站点未被忽略时，在弹出窗口中显示的状态消息。"
+  },
+  "popupOpenSettings": {
+    "message": "打开设置",
+    "description": "弹出窗口中用于打开选项页的按钮文本。"
+  }
+} 

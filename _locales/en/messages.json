@@ -1,0 +1,58 @@
+{
+  "extensionName": {
+    "message": "Stealth Browsing Assistant",
+    "description": "The name of the extension."
+  },
+  "extensionDescription": {
+    "message": "Hides browsing history for specified sites and provides a private log.",
+    "description": "A brief description of what the extension does."
+  },
+  "optionsPageTitle": {
+    "message": "Stealth Browsing Assistant Settings",
+    "description": "Title for the options page."
+  },
+  "ignoreListSectionTitle": {
+    "message": "Ignored Sites Management",
+    "description": "Title for the ignore list section."
+  },
+  "addSitePlaceholder": {
+    "message": "Enter domain (e.g., example.com)",
+    "description": "Placeholder for the input field to add a site."
+  },
+  "addSiteButton": {
+    "message": "Add to Ignore List",
+    "description": "Button text to add a site."
+  },
+  "removeButton": {
+    "message": "Remove",
+    "description": "Button text to remove a site/log."
+  },
+  "privateLogSectionTitle": {
+    "message": "Private Browsing Log",
+    "description": "Title for the private log section."
+  },
+  "clearAllPrivateLogsButton": {
+    "message": "Clear All Private Logs",
+    "description": "Button text to clear all private logs."
+  },
+  "popupAddToIgnoreList": {
+    "message": "Add current site to ignore list",
+    "description": "Button text in popup to add current site."
+  },
+  "popupRemoveFromIgnoreList": {
+    "message": "Remove current site from ignore list",
+    "description": "Button text in popup to remove current site."
+  },
+  "popupSiteIgnored": {
+    "message": "This site is currently being ignored.",
+    "description": "Status message in popup when site is ignored."
+  },
+  "popupSiteNotIgnored": {
+    "message": "This site is not on the ignore list.",
+    "description": "Status message in popup when site is not ignored."
+  },
+  "popupOpenSettings": {
+    "message": "Open Settings",
+    "description": "Button text in popup to open options page."
+  }
+} 

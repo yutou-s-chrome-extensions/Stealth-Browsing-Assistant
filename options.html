@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="optionsPageTitle"></title>
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <h1 data-i18n="optionsPageTitle"></h1>
+
+    <section id="ignore-list-section">
+      <h2 data-i18n="ignoreListSectionTitle"></h2>
+      <div class="input-group">
+        <input type="text" id="new-site-input" data-i18n-placeholder="addSitePlaceholder">
+        <button id="add-site-button" data-i18n="addSiteButton"></button>
+      </div>
+      <ul id="ignore-list"></ul>
+    </section>
+
+    <hr>
+
+    <section id="private-log-section">
+      <h2 data-i18n="privateLogSectionTitle"></h2>
+      <button id="clear-all-logs-button" data-i18n="clearAllPrivateLogsButton"></button>
+      <div id="private-log" class="private-log-container"></div>
+    </section>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html> 
