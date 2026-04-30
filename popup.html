@@ -8,10 +8,61 @@
 </head>
 <body>
   <div class="container">
-    <p id="current-site-status"></p>
-    <button id="toggle-ignore-button"></button>
-    <button id="open-settings-button" data-i18n="popupOpenSettings"></button>
+    <header class="popup-header">
+      <div class="extension-info">
+        <div class="extension-icon"></div>
+        <div class="extension-title" data-i18n="extensionName"></div>
+      </div>
+      <div class="status-indicator">
+        <span class="status-dot" id="status-dot"></span>
+        <span class="status-text" id="status-text" data-i18n="statusActive"></span>
+      </div>
+    </header>
+
+    <main class="popup-content">
+      <section class="current-site-section">
+        <div class="section-label" data-i18n="popupOpenSettings"></div>
+        <div class="site-info" id="site-info">
+          <div class="site-domain" id="current-domain"></div>
+          <div class="site-status" id="current-site-status"></div>
+        </div>
+        
+        <div class="action-buttons">
+          <button id="toggle-ignore-button" class="primary-btn"></button>
+          <button id="open-settings-button" class="secondary-btn" data-i18n="popupOpenSettings"></button>
+        </div>
+      </section>
+
+      <section class="stats-section">
+        <div class="stat-item">
+          <div class="stat-icon ignore-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="ignore-count">0</div>
+            <div class="stat-label" data-i18n="ignoreListSectionTitle"></div>
+          </div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon log-icon"></div>
+          <div class="stat-info">
+            <div class="stat-value" id="log-count">0</div>
+            <div class="stat-label" data-i18n="privateLogSectionTitle"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="quick-settings">
+        <div class="setting-item">
+          <div class="setting-label" data-i18n="darkModeLabel"></div>
+          <label class="toggle-switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </section>
+    </main>
   </div>
+
+  <script src="utils.js"></script>
   <script src="popup.js"></script>
 </body>
 </html> 

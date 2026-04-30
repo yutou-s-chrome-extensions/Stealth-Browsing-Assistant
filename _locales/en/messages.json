@@ -54,5 +54,177 @@
   "popupOpenSettings": {
     "message": "Open Settings",
     "description": "Button text in popup to open options page."
+  },
+  "settingsSectionTitle": {
+    "message": "Settings",
+    "description": "Title for settings section."
+  },
+  "darkModeLabel": {
+    "message": "Dark Mode",
+    "description": "Label for dark mode toggle."
+  },
+  "autoCleanupLabel": {
+    "message": "Auto Cleanup",
+    "description": "Label for auto cleanup section."
+  },
+  "autoCleanupHistory": {
+    "message": "Automatically clean ignored history",
+    "description": "Label for auto history cleanup toggle."
+  },
+  "cleanupInterval": {
+    "message": "Cleanup interval (minutes)",
+    "description": "Label for cleanup interval setting."
+  },
+  "autoCleanupLogs": {
+    "message": "Auto delete old private logs",
+    "description": "Label for auto log cleanup toggle."
+  },
+  "logRetentionDays": {
+    "message": "Keep logs for (days)",
+    "description": "Label for log retention days setting."
+  },
+  "silentBlockLabel": {
+    "message": "Silent Blocking",
+    "description": "Label for silent blocking section."
+  },
+  "silentBlockEnabled": {
+    "message": "Enable silent blocking for ignored sites",
+    "description": "Label for silent blocking toggle."
+  },
+  "blockModeLabel": {
+    "message": "Block mode",
+    "description": "Label for block mode setting."
+  },
+  "blockModeCancel": {
+    "message": "Cancel request",
+    "description": "Option for block mode - cancel request."
+  },
+  "blockModeRedirect": {
+    "message": "Redirect to blank page",
+    "description": "Option for block mode - redirect to blank."
+  },
+  "importExportTitle": {
+    "message": "Data Import & Export",
+    "description": "Title for import/export section."
+  },
+  "exportIgnoreList": {
+    "message": "Export Ignore List",
+    "description": "Button to export ignore list."
+  },
+  "exportPrivateLog": {
+    "message": "Export Private Log",
+    "description": "Button to export private log."
+  },
+  "exportAllData": {
+    "message": "Export All Data",
+    "description": "Button to export all data."
+  },
+  "importData": {
+    "message": "Import Data",
+    "description": "Button to import data."
+  },
+  "selectImportFile": {
+    "message": "Select file to import",
+    "description": "Label for file selection."
+  },
+  "batchOperations": {
+    "message": "Batch Operations",
+    "description": "Title for batch operations section."
+  },
+  "selectAll": {
+    "message": "Select All",
+    "description": "Button to select all items."
+  },
+  "deselectAll": {
+    "message": "Deselect All",
+    "description": "Button to deselect all items."
+  },
+  "deleteSelected": {
+    "message": "Delete Selected",
+    "description": "Button to delete selected items."
+  },
+  "logTableDate": {
+    "message": "Date/Time",
+    "description": "Table header for date."
+  },
+  "logTableTitle": {
+    "message": "Title",
+    "description": "Table header for title."
+  },
+  "logTableUrl": {
+    "message": "Website",
+    "description": "Table header for URL."
+  },
+  "logTableActions": {
+    "message": "Actions",
+    "description": "Table header for actions."
+  },
+  "emptyLogMessage": {
+    "message": "No private browsing records yet.",
+    "description": "Message when log is empty."
+  },
+  "emptyIgnoreListMessage": {
+    "message": "No sites in ignore list yet.",
+    "description": "Message when ignore list is empty."
+  },
+  "successAdded": {
+    "message": "Site added to ignore list successfully.",
+    "description": "Success message for adding site."
+  },
+  "successRemoved": {
+    "message": "Site removed from ignore list successfully.",
+    "description": "Success message for removing site."
+  },
+  "successLogsCleared": {
+    "message": "All private logs cleared successfully.",
+    "description": "Success message for clearing logs."
+  },
+  "successImported": {
+    "message": "Data imported successfully.",
+    "description": "Success message for importing data."
+  },
+  "successExported": {
+    "message": "Data exported successfully.",
+    "description": "Success message for exporting data."
+  },
+  "errorAlreadyExists": {
+    "message": "This site is already in the ignore list.",
+    "description": "Error message when site already exists."
+  },
+  "errorInvalidDomain": {
+    "message": "Please enter a valid domain.",
+    "description": "Error message for invalid domain."
+  },
+  "errorImportFailed": {
+    "message": "Failed to import data. Please check the file format.",
+    "description": "Error message for failed import."
+  },
+  "confirmDeleteSelected": {
+    "message": "Are you sure you want to delete the selected items?",
+    "description": "Confirmation message for deleting selected items."
+  },
+  "confirmClearLogs": {
+    "message": "Are you sure you want to clear all private logs?",
+    "description": "Confirmation message for clearing logs."
+  },
+  "statusActive": {
+    "message": "Active",
+    "description": "Status text when extension is active."
+  },
+  "statusMonitoring": {
+    "message": "Monitoring for ignored sites...",
+    "description": "Status text for monitoring."
+  },
+  "noDomainDetected": {
+    "message": "Cannot manage this page.",
+    "description": "Message when no domain is detected."
+  },
+  "searchPlaceholder": {
+    "message": "Search...",
+    "description": "Placeholder for search input."
+  },
+  "itemsSelected": {
+    "message": "items selected",
+    "description": "Text showing number of selected items."
   }
 } 

@@ -54,5 +54,177 @@
   "popupOpenSettings": {
     "message": "打开设置",
     "description": "弹出窗口中用于打开选项页的按钮文本。"
+  },
+  "settingsSectionTitle": {
+    "message": "设置",
+    "description": "设置部分的标题。"
+  },
+  "darkModeLabel": {
+    "message": "深色模式",
+    "description": "深色模式开关的标签。"
+  },
+  "autoCleanupLabel": {
+    "message": "自动清理",
+    "description": "自动清理部分的标签。"
+  },
+  "autoCleanupHistory": {
+    "message": "自动清理忽略网站的历史记录",
+    "description": "自动清理历史记录开关的标签。"
+  },
+  "cleanupInterval": {
+    "message": "清理间隔（分钟）",
+    "description": "清理间隔设置的标签。"
+  },
+  "autoCleanupLogs": {
+    "message": "自动删除旧的私密日志",
+    "description": "自动清理日志开关的标签。"
+  },
+  "logRetentionDays": {
+    "message": "日志保留天数",
+    "description": "日志保留天数设置的标签。"
+  },
+  "silentBlockLabel": {
+    "message": "静默拦截",
+    "description": "静默拦截部分的标签。"
+  },
+  "silentBlockEnabled": {
+    "message": "对忽略名单中的网站启用静默拦截",
+    "description": "静默拦截开关的标签。"
+  },
+  "blockModeLabel": {
+    "message": "拦截模式",
+    "description": "拦截模式设置的标签。"
+  },
+  "blockModeCancel": {
+    "message": "取消请求",
+    "description": "拦截模式选项 - 取消请求。"
+  },
+  "blockModeRedirect": {
+    "message": "重定向到空白页",
+    "description": "拦截模式选项 - 重定向到空白页。"
+  },
+  "importExportTitle": {
+    "message": "数据导入导出",
+    "description": "导入导出部分的标题。"
+  },
+  "exportIgnoreList": {
+    "message": "导出忽略名单",
+    "description": "导出忽略名单按钮。"
+  },
+  "exportPrivateLog": {
+    "message": "导出私密日志",
+    "description": "导出私密日志按钮。"
+  },
+  "exportAllData": {
+    "message": "导出所有数据",
+    "description": "导出所有数据按钮。"
+  },
+  "importData": {
+    "message": "导入数据",
+    "description": "导入数据按钮。"
+  },
+  "selectImportFile": {
+    "message": "选择要导入的文件",
+    "description": "文件选择标签。"
+  },
+  "batchOperations": {
+    "message": "批量操作",
+    "description": "批量操作部分的标题。"
+  },
+  "selectAll": {
+    "message": "全选",
+    "description": "全选按钮。"
+  },
+  "deselectAll": {
+    "message": "取消全选",
+    "description": "取消全选按钮。"
+  },
+  "deleteSelected": {
+    "message": "删除选中项",
+    "description": "删除选中项按钮。"
+  },
+  "logTableDate": {
+    "message": "日期/时间",
+    "description": "日期表格标题。"
+  },
+  "logTableTitle": {
+    "message": "标题",
+    "description": "标题表格标题。"
+  },
+  "logTableUrl": {
+    "message": "网站",
+    "description": "网站表格标题。"
+  },
+  "logTableActions": {
+    "message": "操作",
+    "description": "操作表格标题。"
+  },
+  "emptyLogMessage": {
+    "message": "暂无隐私浏览记录。",
+    "description": "日志为空时的提示消息。"
+  },
+  "emptyIgnoreListMessage": {
+    "message": "忽略名单中暂无网站。",
+    "description": "忽略名单为空时的提示消息。"
+  },
+  "successAdded": {
+    "message": "网站已成功添加到忽略名单。",
+    "description": "添加网站成功消息。"
+  },
+  "successRemoved": {
+    "message": "网站已成功从忽略名单移除。",
+    "description": "移除网站成功消息。"
+  },
+  "successLogsCleared": {
+    "message": "所有私密日志已成功清空。",
+    "description": "清空日志成功消息。"
+  },
+  "successImported": {
+    "message": "数据导入成功。",
+    "description": "导入数据成功消息。"
+  },
+  "successExported": {
+    "message": "数据导出成功。",
+    "description": "导出数据成功消息。"
+  },
+  "errorAlreadyExists": {
+    "message": "该网站已在忽略名单中。",
+    "description": "网站已存在时的错误消息。"
+  },
+  "errorInvalidDomain": {
+    "message": "请输入有效的域名。",
+    "description": "域名无效时的错误消息。"
+  },
+  "errorImportFailed": {
+    "message": "数据导入失败，请检查文件格式。",
+    "description": "导入失败时的错误消息。"
+  },
+  "confirmDeleteSelected": {
+    "message": "确定要删除选中的项目吗？",
+    "description": "删除选中项的确认消息。"
+  },
+  "confirmClearLogs": {
+    "message": "确定要清空所有私密日志吗？",
+    "description": "清空日志的确认消息。"
+  },
+  "statusActive": {
+    "message": "运行中",
+    "description": "扩展运行中的状态文本。"
+  },
+  "statusMonitoring": {
+    "message": "正在监控忽略名单中的网站...",
+    "description": "监控状态文本。"
+  },
+  "noDomainDetected": {
+    "message": "无法管理此页面。",
+    "description": "未检测到域名时的消息。"
+  },
+  "searchPlaceholder": {
+    "message": "搜索...",
+    "description": "搜索输入框占位符。"
+  },
+  "itemsSelected": {
+    "message": "项已选中",
+    "description": "显示选中项数量的文本。"
   }
 } 
