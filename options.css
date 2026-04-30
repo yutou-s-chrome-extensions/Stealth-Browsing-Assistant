@@ -94,6 +94,14 @@ body {
   box-shadow: var(--shadow-lg);
 }
 
+.page-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
 .header-content {
   display: flex;
   align-items: center;

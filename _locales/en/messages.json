@@ -55,6 +55,10 @@
     "message": "Open Settings",
     "description": "Button text in popup to open options page."
   },
+  "popupCurrentSite": {
+    "message": "Current Site",
+    "description": "Label for current site section in popup."
+  },
   "settingsSectionTitle": {
     "message": "Settings",
     "description": "Title for settings section."
