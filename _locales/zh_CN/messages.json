@@ -55,6 +55,10 @@
     "message": "打开设置",
     "description": "弹出窗口中用于打开选项页的按钮文本。"
   },
+  "popupCurrentSite": {
+    "message": "当前站点",
+    "description": "弹出窗口中当前站点部分的标签。"
+  },
   "settingsSectionTitle": {
     "message": "设置",
     "description": "设置部分的标题。"
