@@ -8,26 +8,297 @@
 </head>
 <body>
   <div class="container">
-    <h1 data-i18n="optionsPageTitle"></h1>
-
-    <section id="ignore-list-section">
-      <h2 data-i18n="ignoreListSectionTitle"></h2>
-      <div class="input-group">
-        <input type="text" id="new-site-input" data-i18n-placeholder="addSitePlaceholder">
-        <button id="add-site-button" data-i18n="addSiteButton"></button>
+    <header class="page-header">
+      <div class="header-content">
+        <div class="extension-icon-large"></div>
+        <div class="header-text">
+          <h1 data-i18n="optionsPageTitle"></h1>
+          <p class="subtitle" data-i18n="statusMonitoring"></p>
+        </div>
       </div>
-      <ul id="ignore-list"></ul>
-    </section>
+      <div class="header-actions">
+        <label class="toggle-switch">
+          <input type="checkbox" id="dark-mode-toggle">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label" data-i18n="darkModeLabel"></span>
+      </div>
+    </header>
 
-    <hr>
+    <main class="main-content">
+      <nav class="tab-nav">
+        <button class="tab-btn active" data-tab="ignore-list">
+          <span class="tab-icon">🚫</span>
+          <span data-i18n="ignoreListSectionTitle"></span>
+        </button>
+        <button class="tab-btn" data-tab="private-log">
+          <span class="tab-icon">📋</span>
+          <span data-i18n="privateLogSectionTitle"></span>
+        </button>
+        <button class="tab-btn" data-tab="settings">
+          <span class="tab-icon">⚙️</span>
+          <span data-i18n="settingsSectionTitle"></span>
+        </button>
+        <button class="tab-btn" data-tab="import-export">
+          <span class="tab-icon">📦</span>
+          <span data-i18n="importExportTitle"></span>
+        </button>
+      </nav>
 
-    <section id="private-log-section">
-      <h2 data-i18n="privateLogSectionTitle"></h2>
-      <button id="clear-all-logs-button" data-i18n="clearAllPrivateLogsButton"></button>
-      <div id="private-log" class="private-log-container"></div>
-    </section>
+      <div class="tab-content">
+        <section id="ignore-list-tab" class="tab-panel active">
+          <div class="section-header">
+            <h2 data-i18n="ignoreListSectionTitle"></h2>
+            <div class="section-stats">
+              <span class="stat-badge" id="ignore-count-badge">0</span>
+              <span data-i18n="itemsSelected"></span>
+            </div>
+          </div>
+
+          <div class="add-site-section">
+            <div class="input-group">
+              <input type="text" id="new-site-input" data-i18n-placeholder="addSitePlaceholder">
+              <button id="add-site-button" class="primary-btn" data-i18n="addSiteButton"></button>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <input type="text" id="ignore-search" class="search-input" data-i18n-placeholder="searchPlaceholder">
+          </div>
+
+          <div class="batch-actions" id="ignore-batch-actions" style="display: none;">
+            <div class="action-left">
+              <span class="selected-count" id="ignore-selected-count">0</span>
+              <span data-i18n="itemsSelected"></span>
+            </div>
+            <div class="action-right">
+              <button id="ignore-select-all" class="secondary-btn" data-i18n="selectAll"></button>
+              <button id="ignore-deselect-all" class="secondary-btn" data-i18n="deselectAll"></button>
+              <button id="ignore-delete-selected" class="danger-btn" data-i18n="deleteSelected"></button>
+            </div>
+          </div>
+
+          <div class="list-container" id="ignore-list-container">
+            <div id="ignore-list" class="items-list"></div>
+            <div id="ignore-empty" class="empty-state" style="display: none;">
+              <div class="empty-icon">🚫</div>
+              <p data-i18n="emptyIgnoreListMessage"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="private-log-tab" class="tab-panel">
+          <div class="section-header">
+            <h2 data-i18n="privateLogSectionTitle"></h2>
+            <div class="section-actions">
+              <button id="clear-all-logs-button" class="danger-btn" data-i18n="clearAllPrivateLogsButton"></button>
+            </div>
+          </div>
+
+          <div class="search-section">
+            <input type="text" id="log-search" class="search-input" data-i18n-placeholder="searchPlaceholder">
+          </div>
+
+          <div class="batch-actions" id="log-batch-actions" style="display: none;">
+            <div class="action-left">
+              <span class="selected-count" id="log-selected-count">0</span>
+              <span data-i18n="itemsSelected"></span>
+            </div>
+            <div class="action-right">
+              <button id="log-select-all" class="secondary-btn" data-i18n="selectAll"></button>
+              <button id="log-deselect-all" class="secondary-btn" data-i18n="deselectAll"></button>
+              <button id="log-delete-selected" class="danger-btn" data-i18n="deleteSelected"></button>
+            </div>
+          </div>
+
+          <div class="log-container">
+            <div class="log-table">
+              <div class="log-table-header">
+                <div class="log-cell log-select">
+                  <input type="checkbox" id="log-select-all-header">
+                </div>
+                <div class="log-cell log-date" data-i18n="logTableDate"></div>
+                <div class="log-cell log-title" data-i18n="logTableTitle"></div>
+                <div class="log-cell log-url" data-i18n="logTableUrl"></div>
+                <div class="log-cell log-actions" data-i18n="logTableActions"></div>
+              </div>
+              <div id="private-log" class="log-table-body"></div>
+            </div>
+            <div id="log-empty" class="empty-state" style="display: none;">
+              <div class="empty-icon">📋</div>
+              <p data-i18n="emptyLogMessage"></p>
+            </div>
+          </div>
+        </section>
+
+        <section id="settings-tab" class="tab-panel">
+          <div class="settings-container">
+            <div class="settings-section">
+              <h3 data-i18n="darkModeLabel"></h3>
+              <div class="setting-item">
+                <div class="setting-info">
+                  <span class="setting-desc">Switch between light and dark theme for better readability.</span>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="settings-dark-mode">
+                  <span class="slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3 data-i18n="autoCleanupLabel"></h3>
+              
+              <div class="setting-item">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="autoCleanupHistory"></span>
+                  <span class="setting-desc">Automatically delete browsing history for ignored sites at regular intervals.</span>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="auto-cleanup-history">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="setting-item" id="cleanup-interval-row">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="cleanupInterval"></span>
+                </div>
+                <select id="cleanup-interval" class="setting-select">
+                  <option value="5">5 minutes</option>
+                  <option value="15">15 minutes</option>
+                  <option value="30" selected>30 minutes</option>
+                  <option value="60">1 hour</option>
+                  <option value="120">2 hours</option>
+                  <option value="360">6 hours</option>
+                  <option value="720">12 hours</option>
+                  <option value="1440">24 hours</option>
+                </select>
+              </div>
+
+              <div class="setting-item">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="autoCleanupLogs"></span>
+                  <span class="setting-desc">Automatically delete private logs that are older than the specified retention period.</span>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="auto-cleanup-logs">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="setting-item" id="log-retention-row">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="logRetentionDays"></span>
+                </div>
+                <select id="log-retention" class="setting-select">
+                  <option value="1">1 day</option>
+                  <option value="3">3 days</option>
+                  <option value="7" selected>7 days</option>
+                  <option value="14">14 days</option>
+                  <option value="30">30 days</option>
+                  <option value="90">90 days</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="settings-section">
+              <h3 data-i18n="silentBlockLabel"></h3>
+              
+              <div class="setting-item">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="silentBlockEnabled"></span>
+                  <span class="setting-desc">Prevent access to ignored sites by blocking or redirecting requests.</span>
+                </div>
+                <label class="toggle-switch">
+                  <input type="checkbox" id="silent-block-enabled">
+                  <span class="slider"></span>
+                </label>
+              </div>
+
+              <div class="setting-item" id="block-mode-row">
+                <div class="setting-info">
+                  <span class="setting-label" data-i18n="blockModeLabel"></span>
+                </div>
+                <select id="block-mode" class="setting-select">
+                  <option value="cancel" data-i18n-value="blockModeCancel"></option>
+                  <option value="redirect" data-i18n-value="blockModeRedirect"></option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="import-export-tab" class="tab-panel">
+          <div class="import-export-container">
+            <div class="export-section">
+              <h3 data-i18n="importExportTitle"></h3>
+              <p class="section-desc">Export your ignore list and private logs for backup or migration.</p>
+              
+              <div class="export-buttons">
+                <button id="export-ignore-list" class="primary-btn">
+                  <span class="btn-icon">📄</span>
+                  <span data-i18n="exportIgnoreList"></span>
+                </button>
+                <button id="export-private-log" class="primary-btn">
+                  <span class="btn-icon">📋</span>
+                  <span data-i18n="exportPrivateLog"></span>
+                </button>
+                <button id="export-all-data" class="primary-btn accent-btn">
+                  <span class="btn-icon">📦</span>
+                  <span data-i18n="exportAllData"></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="import-section">
+              <h3 data-i18n="importData"></h3>
+              <p class="section-desc">Import previously exported data to restore your settings and history.</p>
+              
+              <div class="import-area">
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+                <label for="import-file" class="import-label">
+                  <div class="import-icon">📁</div>
+                  <div class="import-text">
+                    <span data-i18n="selectImportFile"></span>
+                    <small>Supports JSON files exported from this extension</small>
+                  </div>
+                </label>
+              </div>
+
+              <div id="import-preview" style="display: none;">
+                <div class="preview-header">
+                  <h4>Import Preview</h4>
+                  <button id="cancel-import" class="secondary-btn">Cancel</button>
+                </div>
+                <div class="preview-content" id="preview-content"></div>
+                <button id="confirm-import" class="primary-btn">Confirm Import</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
   </div>
 
+  <div id="confirm-modal" class="modal" style="display: none;">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">Confirm Action</h3>
+        <button class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p id="modal-message"></p>
+      </div>
+      <div class="modal-footer">
+        <button id="modal-cancel" class="secondary-btn">Cancel</button>
+        <button id="modal-confirm" class="danger-btn">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="utils.js"></script>
   <script src="options.js"></script>
 </body>
 </html> 
